@@ -8,5 +8,14 @@
   "--menu--": "",
   "--button": "",
   "login": "Kirish",
-  "--button--": ""
+  "aboutMore": "Ko'proq",
+  "--button--": "",
+  "--heading": "",
+  "worksTitle": "What do we do ?",
+  "worksBody": "About us",
+  "aboutTitle": "HomeFix nima ?",
+  "aboutBody": "Biz haqimizda",
+  "advTitle": "Bizning ustunligimiz ?",
+  "advBody": "Biz haqimizda",
+  "--heading--": ""
 }

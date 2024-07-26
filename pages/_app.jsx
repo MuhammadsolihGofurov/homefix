@@ -58,8 +58,9 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     setLocale(router.locale);
     AOS.init({
-      duration: 500,
+      duration: 700,
     });
+    AOS.refresh();
   }, [router.locale]);
 
   return (

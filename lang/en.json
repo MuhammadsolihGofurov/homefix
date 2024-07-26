@@ -8,5 +8,14 @@
   "--menu--": "",
   "--button": "",
   "login": "Login",
-  "--button--": ""
+  "aboutMore": "More about us",
+  "--button--": "",
+  "--heading": "",
+  "worksTitle": "What do we do ?",
+  "worksBody": "About us",
+  "aboutTitle": "What is Home Fix ?",
+  "aboutBody": "About us",
+  "advTitle": "Our Advantages ?",
+  "advBody": "About us",
+  "--heading--": ""
 }

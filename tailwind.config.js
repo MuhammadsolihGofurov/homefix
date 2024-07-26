@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         main: "var(--main)",
         primary: "var(--primary)",
-        second_heading: "var(--second__heading)",
+        second_heading: "var(--second_heading)",
         secondary: "var(--secondary)",
         bg: "var(--bg)",
         text: {
@@ -20,6 +20,12 @@ module.exports = {
         nav: "var(--nav)",
         yellow_light: "var(--yellow_light)",
         dark_light: "var(--dark_light)",
+        adv: {
+          bg: {
+            1: "var(--adv-bg-1)",
+            2: "var(--adv-bg-2)",
+          },
+        },
       },
       screens: {
         small: "360px",
