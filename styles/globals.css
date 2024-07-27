@@ -17,6 +17,9 @@
   --dark_light: #a18625;
   --adv-bg-1: rgba(38, 189, 190, 0.08);
   --adv-bg-2: rgba(38, 189, 190, 0.1);
+  --box: #353535;
+  --corporate: #275556;
+  --individual: #584d24;
 }
 .light {
   --primary: #222;
@@ -31,6 +34,9 @@
   --dark_light: #a18625;
   --adv-bg-1: rgba(38, 189, 190, 0.08);
   --adv-bg-2: rgba(38, 189, 190, 0.1);
+  --box: #fff;
+  --corporate: #8efafb;
+  --individual: #fff1bf;
 }
 
 * {
@@ -115,4 +121,8 @@ img {
     height: 12px;
     background-color: #26bdbe;
   }
+}
+
+.box {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
 }

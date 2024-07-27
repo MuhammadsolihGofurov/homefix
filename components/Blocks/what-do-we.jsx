@@ -23,7 +23,7 @@ export default function WhatDoWe() {
   }
 
   return (
-    <section className="py-14 sm:py-20 lg:py-[120px]">
+    <section className="py-16 sm:py-20 lg:py-[120px]">
       <div className="flex flex-col gap-10 lg:gap-20">
         <div className="container">
           <Heading

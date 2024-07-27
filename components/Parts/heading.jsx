@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "../Button/main-button";
 
-export default function Heading({ title, body, type = "start" }) {
+export default function Heading({ title, body, type = "start", button, link }) {
   return (
     <div
       className={`flex flex-row gap-2 ${
         type == "center"
-          ? "justify-center items-center"
+          ? "justify-center items-center text-center"
           : "items-center justify-between"
       }`}
     >
@@ -25,6 +26,13 @@ export default function Heading({ title, body, type = "start" }) {
           {title}
         </h3>
       </div>
+      {type == "button" ? (
+        <a href={link} className="lg:block hidden" data-aos="fade-up">
+          <Button>{button}</Button>
+        </a>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

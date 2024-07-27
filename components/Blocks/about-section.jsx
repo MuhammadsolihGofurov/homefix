@@ -25,7 +25,7 @@ export default function AboutSection({ page = "home" }) {
     <section
       id="about"
       className={`${
-        page == "home" ? "pb-14 sm:py-20 lg:py-[120px]" : "pb-14 sm:pb-20"
+        page == "home" ? "pb-16 sm:py-20 lg:py-[120px]" : "pb-14 sm:pb-20"
       }`}
     >
       <div className="container flex flex-col gap-7 sm:gap-14 items-start">

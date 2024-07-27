@@ -1,4 +1,10 @@
-import { AboutSection, HomeBanner, WhatDoWe } from "@/components";
+import {
+  AboutSection,
+  HomeBanner,
+  MembershipPlan,
+  Services,
+  WhatDoWe,
+} from "@/components";
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
@@ -25,6 +31,8 @@ export default function Home() {
       <HomeBanner />
       <WhatDoWe />
       <AboutSection />
+      <MembershipPlan />
+      <Services />
     </main>
   );
 }

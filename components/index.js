@@ -18,6 +18,8 @@ export { default as HomeBanner } from "./Banners/home-banner";
 export { defualt as Results } from "./Blocks/results";
 export { default as WhatDoWe } from "./Blocks/what-do-we";
 export { default as AboutSection } from "./Blocks/about-section";
+export { default as MembershipPlan } from "./Blocks/membership-plan";
+export { default as Services } from "./Blocks/services";
 
 // Parts
 export { default as Heading } from "./Parts/heading";

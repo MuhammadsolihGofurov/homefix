@@ -26,6 +26,9 @@ module.exports = {
             2: "var(--adv-bg-2)",
           },
         },
+        box: "var(--box)",
+        corporate: "var(--corporate)",
+        individual: "var(--individual)",
       },
       screens: {
         small: "360px",
