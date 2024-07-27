@@ -1,7 +1,10 @@
 import {
   AboutSection,
+  FAQ,
   HomeBanner,
   MembershipPlan,
+  Opinions,
+  Partners,
   Services,
   WhatDoWe,
 } from "@/components";
@@ -33,6 +36,9 @@ export default function Home() {
       <AboutSection />
       <MembershipPlan />
       <Services />
+      <Opinions />
+      <FAQ />
+      <Partners />
     </main>
   );
 }

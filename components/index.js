@@ -20,6 +20,9 @@ export { default as WhatDoWe } from "./Blocks/what-do-we";
 export { default as AboutSection } from "./Blocks/about-section";
 export { default as MembershipPlan } from "./Blocks/membership-plan";
 export { default as Services } from "./Blocks/services";
+export { default as Opinions } from "./Blocks/opinions";
+export { default as FAQ } from "./Blocks/faqs";
+export { default as Partners } from "./Blocks/partners";
 
 // Parts
 export { default as Heading } from "./Parts/heading";
@@ -27,3 +30,4 @@ export { default as Heading } from "./Parts/heading";
 // Cards
 export { default as WorksCard } from "./Cards/work-card";
 export { default as AdvCard } from "./Cards/adv-card";
+export { default as OpinionCard } from "./Cards/opinion-card";
