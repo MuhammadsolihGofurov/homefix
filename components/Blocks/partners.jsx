@@ -7,7 +7,7 @@ import { Heading } from "..";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper";
 
-export default function FAQ() {
+export default function Partners() {
   const intl = useIntl();
   const router = useRouter();
 
@@ -34,6 +34,9 @@ export default function FAQ() {
         <div className="w-full" data-aos="fade-up" data-aos-delay="200">
           <Swiper
             modules={[Autoplay]}
+            autoplay={{
+              delay: 2000,
+            }}
             breakpoints={{
               0: {
                 slidesPerView: 2,

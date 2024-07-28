@@ -83,7 +83,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#222] pt-20 pb-5 sm:py-20 rounded-t-3xl sm:rounded-t-[36px]">
+    <footer
+      className="bg-[#222] pt-20 pb-5 sm:py-20 rounded-t-3xl sm:rounded-t-[36px] shadow-md shadow-adv-bg-2"
+      style={{ boxShadow: `0px -1px 10px rgba(38, 189, 190, 0.1)` }}
+    >
       <div className="container flex flex-col gap-10 sm:gap-16">
         <div className="flex flex-row items-center justify-between flex-wrap gap-y-10 gap-x-5">
           <a
@@ -212,7 +215,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3 font-normal text-sm">
               {links1?.map((link, index) => {
                 return (
-                  <a href={`${link?.url}`} title={link?.name}>
+                  <a href={`${link?.url}`} title={link?.name} key={index}>
                     <span>{link?.name}</span>:{" "}
                     <span className="hover:text-main">{link?.value}</span>
                   </a>
@@ -230,6 +233,7 @@ export default function Footer() {
                   <a
                     href={`${link?.url}`}
                     title={link?.name}
+                    key={index}
                     className="hover:text-main"
                   >
                     <span>{link?.name}</span>
@@ -248,6 +252,7 @@ export default function Footer() {
                   <a
                     href={`${link?.url}`}
                     title={link?.name}
+                    key={index}
                     className="hover:text-main"
                   >
                     <span>{link?.name}</span>
@@ -266,6 +271,7 @@ export default function Footer() {
                   <a
                     href={`${link?.url}`}
                     title={link?.name}
+                    key={index}
                     className="hover:text-main"
                   >
                     <span>{link?.name}</span>

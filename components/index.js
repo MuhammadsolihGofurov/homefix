@@ -23,6 +23,7 @@ export { default as Services } from "./Blocks/services";
 export { default as Opinions } from "./Blocks/opinions";
 export { default as FAQ } from "./Blocks/faqs";
 export { default as Partners } from "./Blocks/partners";
+export { default as Breadcrumbs } from "./Blocks/breadcrumbs";
 
 // Parts
 export { default as Heading } from "./Parts/heading";

@@ -5,7 +5,7 @@ import useSWR from "swr";
 import fetcher from "../../utils/fetcher";
 import { Heading } from "..";
 
-export default function FAQ() {
+export default function FAQ({ isHeading }) {
   const intl = useIntl();
   const router = useRouter();
   const [active, setActive] = useState(0);
@@ -29,11 +29,15 @@ export default function FAQ() {
   return (
     <section id="faq" className="pb-16 sm:py-20 lg:pb-[120px] relative z-[1]">
       <div className="container flex flex-col gap-10 lg:gap-20">
-        <Heading
-          title={intl.formatMessage({ id: "faqTitle" })}
-          body={intl.formatMessage({ id: "faqBody" })}
-          type="center"
-        />
+        {!isHeading ? (
+          <Heading
+            title={intl.formatMessage({ id: "faqTitle" })}
+            body={intl.formatMessage({ id: "faqBody" })}
+            type="center"
+          />
+        ) : (
+          <></>
+        )}
         <div className="w-full 2xl:w-3/5 flex flex-col gap-5 mx-auto">
           {faqs?.data?.map((item, index) => {
             return (

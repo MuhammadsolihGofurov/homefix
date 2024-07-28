@@ -11,6 +11,7 @@ import {
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import useSWR from "swr";
 
 export default function Home() {
@@ -23,6 +24,13 @@ export default function Home() {
       },
     })
   );
+
+  useEffect(() => {
+    const hash = router.asPath.split("#")[1];
+    if (hash) {
+      document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [router.asPath]);
 
   return (
     <main className="">

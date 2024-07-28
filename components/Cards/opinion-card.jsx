@@ -1,4 +1,5 @@
 import React from "react";
+import Fancybox from "../custom/fancybox";
 
 export default function OpinionCard({ data }) {
   return (
@@ -14,26 +15,33 @@ export default function OpinionCard({ data }) {
           loading="lazy"
           className="h-[120px] lg:w-[200px] w-[120px] lg:h-[200px] rounded-full"
         />
-        <button type="button" className="absolute bottom-0 right-0">
-          <svg
-            width="49"
-            height="48"
-            viewBox="0 0 49 48"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-[24px] h-[24px] sm:w-[48px] sm:h-[48px]"
+        <Fancybox>
+          <button
+            type="button"
+            className="absolute bottom-0 right-0"
+            data-fancybox="opinions"
+            href={data?.video_url}
           >
-            <circle cx="24.5" cy="24" r="24" fill="#26BDBE" />
-            <path
-              d="M19.5 16.7047C19.5 15.1139 21.2673 14.1598 22.5973 15.0326L32.952 21.8279C34.1556 22.6178 34.1556 24.3822 32.952 25.1721L22.5973 31.9674C21.2673 32.8402 19.5 31.8861 19.5 30.2953V16.7047Z"
-              fill="white"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+            <svg
+              width="49"
+              height="48"
+              viewBox="0 0 49 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-[24px] h-[24px] sm:w-[48px] sm:h-[48px]"
+            >
+              <circle cx="24.5" cy="24" r="24" fill="#26BDBE" />
+              <path
+                d="M19.5 16.7047C19.5 15.1139 21.2673 14.1598 22.5973 15.0326L32.952 21.8279C34.1556 22.6178 34.1556 24.3822 32.952 25.1721L22.5973 31.9674C21.2673 32.8402 19.5 31.8861 19.5 30.2953V16.7047Z"
+                fill="white"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </Fancybox>
       </div>
       <div className="flex flex-col gap-5 flex-1">
         <div className="flex flex-col gap-1">
@@ -44,6 +52,8 @@ export default function OpinionCard({ data }) {
               title={data?.title}
               loading="lazy"
               className="h-[120px] lg:w-[200px] w-[120px] lg:h-[200px] rounded-full"
+              data-fancybox="opinions"
+              href={data?.video_url}
             />
           </div>
           <h5 className="text-primary font-semibold">{data?.name}</h5>

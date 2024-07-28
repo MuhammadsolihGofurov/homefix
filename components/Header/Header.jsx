@@ -11,15 +11,14 @@ export default function Header() {
   const intl = useIntl();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-[100]">
+    <header className="fixed top-0 left-0 w-full z-[100] ">
       <div className="container">
-        <div className="flex items-center justify-between gap-3 w-full py-5 sm:py-6 px-3 sm:px-8 rounded-br-[36px] rounded-bl-[36px] bg-nav relative z-0">
-          <Link href="/" className="w-[100px] xs:w-[120px] h-[32px] xs:h-[42px]">
-            <img
-              src={settings?.logo}
-              alt="logo"
-              title="logo"
-            />
+        <div className="flex items-center justify-between gap-3 w-full py-5 sm:py-6 px-3 sm:px-8 rounded-br-[36px] rounded-bl-[36px] bg-nav relative z-0 shadow-md shadow-adv-bg-2">
+          <Link
+            href="/"
+            className="w-[100px] xs:w-[120px] h-[32px] xs:h-[42px]"
+          >
+            <img src={settings?.logo} alt="logo" title="logo" />
           </Link>
           <Menu />
           <div className="flex items-center gap-4 sm:gap-7">

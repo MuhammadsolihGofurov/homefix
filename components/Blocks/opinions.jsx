@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Heading, OpinionCard } from "..";
 import { useIntl } from "react-intl";
 import { SwiperSlide, Swiper } from "swiper/react";
@@ -10,6 +10,19 @@ import { Autoplay } from "swiper";
 export default function Opinions() {
   const intl = useIntl();
   const router = useRouter();
+  const swiperRef = useRef(null);
+
+  const slideToPrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const slideToNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
 
   const { data: data } = useSWR(["testimonials", router.locale], (url) =>
     fetcher(url, {
@@ -28,13 +41,15 @@ export default function Opinions() {
         <Heading
           title={intl.formatMessage({ id: "opinionsTitle" })}
           body={intl.formatMessage({ id: "opinionsBody" })}
-          swiperPrev
-          swiperNext
+          swiper
+          swiperPrev={slideToPrev}
+          swiperNext={slideToNext}
         />
       </div>
       <div className="w-full">
         <Swiper
           modules={[Autoplay]}
+          ref={swiperRef}
           breakpoints={{
             0: {
               slidesPerView: 1.15,

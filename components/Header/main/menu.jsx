@@ -26,7 +26,7 @@ export default function Menu() {
     {
       id: 4,
       title: intl.formatMessage({ id: "reviews" }),
-      url: `#reviews`,
+      url: `/${router.locale}/reviews`,
     },
     {
       id: 5,

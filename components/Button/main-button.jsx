@@ -11,8 +11,8 @@ export default function Button({
       type={type}
       alt={title}
       title={title}
-      {...pageProps}
       className="bg-yellow_light px-10 py-4 rounded-xl font-bold text-primary uppercase button__shadow"
+      {...pageProps}
     >
       {children}
     </button>

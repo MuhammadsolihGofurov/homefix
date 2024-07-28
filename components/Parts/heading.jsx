@@ -1,7 +1,16 @@
 import React from "react";
 import Button from "../Button/main-button";
 
-export default function Heading({ title, body, type = "start", button, link }) {
+export default function Heading({
+  title,
+  body,
+  type = "start",
+  button,
+  link,
+  swiperNext,
+  swiperPrev,
+  swiper,
+}) {
   return (
     <div
       className={`flex flex-row gap-2 ${
@@ -30,6 +39,56 @@ export default function Heading({ title, body, type = "start", button, link }) {
         <a href={link} className="lg:block hidden" data-aos="fade-up">
           <Button>{button}</Button>
         </a>
+      ) : (
+        <></>
+      )}
+      {swiper ? (
+        <div className="md:flex hidden items-center gap-4">
+          <button
+            type="button"
+            onClick={() => swiperPrev()}
+            className="w-[60px] h-[60px] rounded-full bg-main flex items-center justify-center border-2 border-main hover:bg-white group"
+          >
+            <svg
+              width="10"
+              height="19"
+              viewBox="0 0 10 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 1L0.999999 9.5L9 18"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:stroke-main"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => swiperNext()}
+            className="w-[60px] h-[60px] rounded-full bg-main flex items-center justify-center border-2 border-main hover:bg-white group"
+          >
+            <svg
+              width="10"
+              height="19"
+              viewBox="0 0 10 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 18L9 9.5L1 1"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:stroke-main"
+              />
+            </svg>
+          </button>
+        </div>
       ) : (
         <></>
       )}
