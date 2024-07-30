@@ -10,9 +10,9 @@ export default function WorksCard({ data }) {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute top-[85%] left-0 p-5 group-hover:top-auto group-hover:bottom-0 transition-all duration-200">
+      <div className="absolute top-[85%] left-0 p-5 group-hover:top-auto group-hover:bottom-0 transition-all duration-500">
         <h4 className="text-lg md:text-2xl font-bold">{data?.title}</h4>
-        <p className="text-sm sm:text-base font-medium leading-5 opacity-0 translate-y-[150px] group-hover:translate-y-0 group-hover:opacity-100 transition-transform duration-300">
+        <p className="text-sm sm:text-base font-medium leading-5 opacity-0 translate-y-[150px] group-hover:translate-y-0 group-hover:opacity-100 transition-transform duration-500">
           {data?.description}
         </p>
       </div>

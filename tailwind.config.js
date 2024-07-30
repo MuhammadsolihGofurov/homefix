@@ -29,6 +29,7 @@ module.exports = {
         box: "var(--box)",
         corporate: "var(--corporate)",
         individual: "var(--individual)",
+        input: "var(--input)",
       },
       screens: {
         small: "360px",

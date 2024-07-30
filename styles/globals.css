@@ -20,6 +20,7 @@
   --box: #353535;
   --corporate: #275556;
   --individual: #584d24;
+  --input: #2f2f2f;
 }
 .light {
   --primary: #222;
@@ -37,6 +38,7 @@
   --box: #fff;
   --corporate: #8efafb;
   --individual: #fff1bf;
+  --input: #f3f3f3;
 }
 
 * {

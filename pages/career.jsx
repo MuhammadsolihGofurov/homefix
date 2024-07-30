@@ -1,4 +1,4 @@
-import { Breadcrumbs, FAQ, Opinions } from "@/components";
+import { AppForm, Breadcrumbs, FAQ, Opinions } from "@/components";
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
@@ -19,6 +19,7 @@ export default function Career() {
       },
     })
   );
+
   return (
     <main className="pt-20 md:pt-[100px]">
       <Seo
@@ -36,13 +37,21 @@ export default function Career() {
         ]}
         title={intl.formatMessage({ id: "careerTitle" })}
       />
-      <div className="container">
+      <div className="container flex flex-col gap-8">
         <div
-          className="text-primary opacity-50 pb-16 sm:pb-20"
+          className="text-primary opacity-50"
           dangerouslySetInnerHTML={{
             __html: settings?.career_texts,
           }}
         ></div>
+        <div className="flex flex-col gap-5 pb-16 sm:pb-20">
+          <h3 className="text-[#365CA8] font-semibold text-lg sm:text-xl">
+            {intl.formatMessage({ id: "careerBody" })}
+          </h3>
+          <div className="w-full 2xl:w-3/6">
+            <AppForm page="career" />
+          </div>
+        </div>
       </div>
     </main>
   );

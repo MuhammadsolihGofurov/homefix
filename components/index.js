@@ -24,6 +24,7 @@ export { default as Opinions } from "./Blocks/opinions";
 export { default as FAQ } from "./Blocks/faqs";
 export { default as Partners } from "./Blocks/partners";
 export { default as Breadcrumbs } from "./Blocks/breadcrumbs";
+export { default as AppForm } from "./Blocks/app-form";
 
 // Parts
 export { default as Heading } from "./Parts/heading";
@@ -32,3 +33,7 @@ export { default as Heading } from "./Parts/heading";
 export { default as WorksCard } from "./Cards/work-card";
 export { default as AdvCard } from "./Cards/adv-card";
 export { default as OpinionCard } from "./Cards/opinion-card";
+export { default as ServiceCard } from "./Cards/service-card";
+
+// form
+export { default as Input } from "./custom/input";
