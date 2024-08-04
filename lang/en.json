@@ -68,5 +68,7 @@
   "--message": "",
   "successResumeTitle": "Success",
   "successResumeBody": "Great, your information has been sent. We will contact you soon.",
+  "successPlanChanged": "You have successfully changed the membership plan.",
+  "successMonthsChanged": "You have changed duration.",
   "--message--": ""
 }

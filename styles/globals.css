@@ -41,6 +41,33 @@
   --input: #f3f3f3;
 }
 
+::selection {
+  color: #222;
+  background: #26bdbe;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0c6161;
+  border-radius: 24px 0 0 24px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 24px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c2c2;
+}
+
 * {
   margin: 0;
   padding: 0;

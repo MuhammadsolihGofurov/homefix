@@ -124,8 +124,8 @@ export default function AppForm({ page }) {
           page == "contact" ? "justify-end" : ""
         }`}
       >
-        <Button type="submit">
-          {reqLoading ? "..." : intl.formatMessage({ id: "send" })}
+        <Button type="submit" isLoading={reqLoading}>
+          {intl.formatMessage({ id: "send" })}
         </Button>
       </div>
     </form>

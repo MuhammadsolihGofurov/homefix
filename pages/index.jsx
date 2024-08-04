@@ -33,20 +33,22 @@ export default function Home() {
   }, [router.asPath]);
 
   return (
-    <main className="">
+    <>
       <Seo
         title={seo?.data?.seo_home_title}
         description={seo?.data?.seo_home_description}
         body={seo?.data?.seo_home_keywords}
       />
-      <HomeBanner />
-      <WhatDoWe />
-      <AboutSection />
-      <MembershipPlan />
-      <Services />
-      <Opinions />
-      <FAQ />
-      <Partners />
-    </main>
+      <main>
+        <HomeBanner />
+        <WhatDoWe />
+        <AboutSection />
+        <MembershipPlan/>
+        <Services />
+        <Opinions />
+        <FAQ />
+        <Partners />
+      </main>
+    </>
   );
 }

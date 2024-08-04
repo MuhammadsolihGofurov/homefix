@@ -1,8 +1,15 @@
+import { toggleOffcanvas } from "@/redux/slice/settings";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 export default function Bars() {
+  const dispatch = useDispatch();
   return (
-    <button type="button" className="2xl:hidden block">
+    <button
+      type="button"
+      className="2xl:hidden block"
+      onClick={() => dispatch(toggleOffcanvas())}
+    >
       <svg
         width="21"
         height="15"

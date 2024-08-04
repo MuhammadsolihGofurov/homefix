@@ -68,5 +68,7 @@
   "--message": "",
   "successResumeTitle": "Muvaffaqiyatli",
   "successResumeBody": "Ajoyib , ma'lumotlaringiz yuborildi. Biz tez orada sizga aloqaga chiqamiz.",
+  "successPlanChanged": "Ta'rifni muvaffaqiyatli o'zgartirdingiz.",
+  "successMonthsChanged": "Muddat o'zgartirdingiz.",
   "--message--": ""
 }

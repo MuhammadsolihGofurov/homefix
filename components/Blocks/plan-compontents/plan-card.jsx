@@ -1,11 +1,24 @@
 import React from "react";
+import toast from "react-hot-toast";
 import { useIntl } from "react-intl";
 
-export default function PlanCard({ type }) {
+export default function PlanCard({
+  type,
+  activePlan,
+  data,
+  activeIndex,
+  setActivePlan,
+}) {
   const intl = useIntl();
   const isType = type == "corporate";
   const badge = isType ? "corporate" : "individual";
   const image = isType ? "/images/corporate.png" : "/images/individual.png";
+  const plan = isType ? 0 : 1;
+
+  const changePlan = (id) => {
+    toast.success(intl.formatMessage({id: "successPlanChanged"}));
+    setActivePlan(id);
+  };
 
   return (
     <div
@@ -14,6 +27,7 @@ export default function PlanCard({ type }) {
           ? "corporate bg-corporate hover:border-main"
           : "individual bg-individual hover:border-yellow-500"
       } px-5 sm:px-8 pt-5 sm:pt-9 pb-8 sm:pb-14 rounded-xl  flex flex-col gap-10 items-start relative z-0 cursor-pointer border-2 border-transparent  transition-colors duration-200`}
+      onClick={() => changePlan(plan)}
     >
       <div
         className={`px-4 py-2 rounded-full bg-white uppercase text-sm sm:text-lg font-bold ${
@@ -24,7 +38,7 @@ export default function PlanCard({ type }) {
       </div>
       <div className="flex flex-col gap-3">
         <h3 className="text-2xl sm:text-5xl font-bold text-primary">
-          20.500.000{" "}
+          {data?.amount}{" "}
           <span className="text-sm sm:text-lg">
             {intl.formatMessage({ id: "sum" })}
           </span>
@@ -34,7 +48,11 @@ export default function PlanCard({ type }) {
         </p>
       </div>
       {/* check */}
-      <div className="absolute top-4 right-4">
+      <div
+        className={`absolute top-4 right-4 ${
+          activePlan == plan ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <svg
           width="35"
           height="32"

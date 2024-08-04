@@ -7,6 +7,7 @@ const settingsSlice = createSlice({
     results: null,
     socials: null,
     theme: "light",
+    offcanvas: false,
   },
   reducers: {
     setSettingsInfo: (state, action) => {
@@ -32,10 +33,19 @@ const settingsSlice = createSlice({
         typeof window !== "undefined" ? localStorage.getItem("theme") : "light";
       state.theme = localTheme ? localTheme : "light";
     },
+    toggleOffcanvas: (state, action) => {
+      state.offcanvas = !state.offcanvas;
+    },
   },
 });
 
-export const { setSettingsInfo, setResults, setSocials, changeTheme , defineTheme } =
-  settingsSlice.actions;
+export const {
+  setSettingsInfo,
+  setResults,
+  setSocials,
+  changeTheme,
+  defineTheme,
+  toggleOffcanvas,
+} = settingsSlice.actions;
 
 export default settingsSlice.reducer;

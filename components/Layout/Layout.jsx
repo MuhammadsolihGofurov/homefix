@@ -1,22 +1,24 @@
 import i18nextConfig from "../../next.config";
 import Head from "next/head";
 import Script from "next/script";
-import { Footer, Header, Scripts } from "../../components";
+import { Footer, Header, Loading, Offcanvas, Scripts } from "../../components";
 import useSWR from "swr";
 import fetcher from "../../utils/fetcher";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   setResults,
   setSettingsInfo,
   setSocials,
 } from "@/redux/slice/settings";
 
+
 const Layout = ({ children }) => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.settings);
+  const [loading, setLoading] = useState(false);
 
   const { data: settings } = useSWR(["settings", router.locale], (url) =>
     fetcher(url, {
@@ -30,7 +32,10 @@ const Layout = ({ children }) => {
     dispatch(setSettingsInfo(settings?.data?.settings));
     dispatch(setResults(settings?.data?.results));
     dispatch(setSocials(settings?.data?.socials));
-  }, [settings]);
+    // setTimeout(() => {
+    //   setLoading((prev) => prev == false);
+    // }, 700);
+  }, [settings?.data]);
 
   return (
     <>
@@ -97,10 +102,15 @@ const Layout = ({ children }) => {
           {/* Header */}
           <Header />
 
+          <Loading isloading={loading} />
+
           <div className="content-wrapper">{children}</div>
 
           {/* Footer */}
           <Footer />
+
+          {/* Offcanvas */}
+          <Offcanvas />
         </div>
       </div>
 

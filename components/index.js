@@ -37,3 +37,7 @@ export { default as ServiceCard } from "./Cards/service-card";
 
 // form
 export { default as Input } from "./custom/input";
+
+// custom
+export { default as Loading } from "./custom/loading";
+export { default as Offcanvas } from "./custom/offcanvas";

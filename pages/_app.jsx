@@ -77,6 +77,7 @@ export default function App({ Component, pageProps }) {
             <Toaster position="top-right" reverseOrder={false} />
             <Layout>
               <Component {...pageProps} />
+              
             </Layout>
           </SkeletonTheme>
         </LangProvider>
