@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
     dispatch(setResults(settings?.data?.results));
     dispatch(setSocials(settings?.data?.socials));
     setTimeout(() => {
-      setLoading((prev) => prev == false);
+      setLoading(false);
     }, 700);
   }, [settings?.data]);
 
