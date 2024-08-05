@@ -46,6 +46,7 @@
   "chooseMonths": "Oylik yoki bir martalik tarifni tanlang:",
   "corporateBody": "Korporativ tarifda:",
   "individualBody": "Yakka tartibda tarifda:",
+  "individualRequest": "Quyidagi knopkani bosing va telefon nomeringizni qoldiring, biz sizga aloqaga chiqamiz.",
   "--membership--": "",
   "--footer": "",
   "footerLink1Title": "Bog'lanish",
@@ -63,6 +64,9 @@
   "nameInput": "Ism",
   "phoneInput": "Telefon nomer",
   "messageInput": "Xabar",
+  "emailInput": "Elektron pochta",
+  "passwordInput": "Parol",
+  "locationInput": "Manzil",
   "resumeInput": "Resumeni yuklang.",
   "--input--": "",
   "--message": "",
@@ -70,5 +74,7 @@
   "successResumeBody": "Ajoyib , ma'lumotlaringiz yuborildi. Biz tez orada sizga aloqaga chiqamiz.",
   "successPlanChanged": "Ta'rifni muvaffaqiyatli o'zgartirdingiz.",
   "successMonthsChanged": "Muddat o'zgartirdingiz.",
+  "successMembershipTitle": "Muvaffaqiyatli",
+  "successMembershipBody": "Ajoyib , ma'lumotlaringiz yuborildi. Biz tez orada sizga aloqaga chiqamiz.",
   "--message--": ""
 }

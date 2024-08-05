@@ -41,3 +41,6 @@ export { default as Input } from "./custom/input";
 // custom
 export { default as Loading } from "./custom/loading";
 export { default as Offcanvas } from "./custom/offcanvas";
+
+// modal
+export { default as Modal } from "./Modal/register";

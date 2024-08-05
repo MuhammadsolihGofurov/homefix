@@ -30,6 +30,7 @@ module.exports = {
         corporate: "var(--corporate)",
         individual: "var(--individual)",
         input: "var(--input)",
+        modalBg: "var(--modalBg)",
       },
       screens: {
         small: "360px",

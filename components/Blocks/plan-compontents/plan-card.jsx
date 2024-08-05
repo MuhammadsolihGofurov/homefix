@@ -14,9 +14,10 @@ export default function PlanCard({
   const badge = isType ? "corporate" : "individual";
   const image = isType ? "/images/corporate.png" : "/images/individual.png";
   const plan = isType ? 0 : 1;
+  const plansType = plan == 0 ? "corporate" : "individual";
 
   const changePlan = (id) => {
-    toast.success(intl.formatMessage({id: "successPlanChanged"}));
+    toast.success(intl.formatMessage({ id: "successPlanChanged" }));
     setActivePlan(id);
   };
 

@@ -8,6 +8,7 @@ const settingsSlice = createSlice({
     socials: null,
     theme: "light",
     offcanvas: false,
+    registerModal: false,
   },
   reducers: {
     setSettingsInfo: (state, action) => {
@@ -36,6 +37,9 @@ const settingsSlice = createSlice({
     toggleOffcanvas: (state, action) => {
       state.offcanvas = !state.offcanvas;
     },
+    toggleRegisterModal: (state, action) => {
+      state.registerModal = !state.registerModal;
+    },
   },
 });
 
@@ -46,6 +50,7 @@ export const {
   changeTheme,
   defineTheme,
   toggleOffcanvas,
+  toggleRegisterModal,
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;

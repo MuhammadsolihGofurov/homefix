@@ -12,7 +12,7 @@ import {
   setSettingsInfo,
   setSocials,
 } from "@/redux/slice/settings";
-
+import Register from "../Modal/register";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -111,6 +111,9 @@ const Layout = ({ children }) => {
 
           {/* Offcanvas */}
           <Offcanvas />
+
+          {/* Modal */}
+          <Register />
         </div>
       </div>
 

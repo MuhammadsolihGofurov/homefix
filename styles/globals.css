@@ -21,6 +21,7 @@
   --corporate: #275556;
   --individual: #584d24;
   --input: #2f2f2f;
+  --modalBg: #ededed44;
 }
 .light {
   --primary: #222;
@@ -39,6 +40,7 @@
   --corporate: #8efafb;
   --individual: #fff1bf;
   --input: #f3f3f3;
+  --modalBg: #31313144;
 }
 
 ::selection {
@@ -191,4 +193,17 @@ img {
 }
 .opinionsSwiper .swiper-wrapper {
   padding: 12px 0 12px 20px;
+}
+
+/* modal */
+.modal {
+  align-items: flex-start;
+}
+.scroll__hidden {
+  scrollbar-width: 0;
+}
+@media screen and (min-height: 630px) {
+  .modal {
+    align-items: center;
+  }
 }
