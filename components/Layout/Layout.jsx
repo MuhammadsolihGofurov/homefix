@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.settings);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const { data: settings } = useSWR(["settings", router.locale], (url) =>
     fetcher(url, {
@@ -32,9 +32,9 @@ const Layout = ({ children }) => {
     dispatch(setSettingsInfo(settings?.data?.settings));
     dispatch(setResults(settings?.data?.results));
     dispatch(setSocials(settings?.data?.socials));
-    // setTimeout(() => {
-    //   setLoading((prev) => prev == false);
-    // }, 700);
+    setTimeout(() => {
+      setLoading((prev) => prev == false);
+    }, 700);
   }, [settings?.data]);
 
   return (

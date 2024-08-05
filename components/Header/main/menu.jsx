@@ -16,7 +16,7 @@ export default function Menu() {
     {
       id: 2,
       title: intl.formatMessage({ id: "pricing" }),
-      url: `#pricing`,
+      url: `/?#pricing`,
     },
     {
       id: 3,
