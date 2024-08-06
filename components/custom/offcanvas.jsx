@@ -20,7 +20,7 @@ export default function Offcanvas() {
     {
       id: 2,
       title: intl.formatMessage({ id: "pricing" }),
-      url: `/${router.locale}/pricing`,
+      url: `/${router.locale}/?#pricing`,
     },
     {
       id: 3,

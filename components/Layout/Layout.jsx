@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
     setTimeout(() => {
       setLoading(false);
     }, 700);
-  }, [settings?.data]);
+  }, [settings?.data?.settings]);
 
   return (
     <>

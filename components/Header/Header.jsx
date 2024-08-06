@@ -18,7 +18,12 @@ export default function Header() {
             href="/"
             className="w-[100px] xs:w-[120px] h-[32px] xs:h-[42px]"
           >
-            <img src={settings?.logo} alt="logo" title="logo" />
+            <img
+              src={settings?.logo}
+              alt="logo"
+              title="logo"
+              className="w-[100px] xs:w-[120px] h-[32px] xs:h-[42px]"
+            />
           </Link>
           <Menu />
           <div className="flex items-center gap-4 sm:gap-7">
