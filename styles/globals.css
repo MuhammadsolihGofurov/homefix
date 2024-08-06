@@ -53,6 +53,7 @@
   width: 10px;
 }
 
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: #0c6161;
@@ -62,6 +63,12 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #fff;
+  border-radius: 24px;
+}
+.modal__questions::-webkit-scrollbar-thumb{
+  background-color: var(--main);
+}
+.modal__questions::-webkit-scrollbar-track{
   border-radius: 24px;
 }
 

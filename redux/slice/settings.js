@@ -9,6 +9,10 @@ const settingsSlice = createSlice({
     theme: "light",
     offcanvas: false,
     registerModal: false,
+    services: null,
+    individual_services: [],
+    individual_total: 0,
+    questionModal: false,
   },
   reducers: {
     setSettingsInfo: (state, action) => {
@@ -40,6 +44,26 @@ const settingsSlice = createSlice({
     toggleRegisterModal: (state, action) => {
       state.registerModal = !state.registerModal;
     },
+    toggleQuestionModal: (state, action) => {
+      state.questionModal = !state.questionModal;
+    },
+    setServices: (state, action) => {
+      state.services = action.payload;
+    },
+    setIndividualServices: (state, action) => {
+      const service = action.payload;
+      if (state.individual_services.some((item) => item.id === service.id)) {
+        state.individual_services = state.individual_services.filter(
+          (item) => item.id !== service.id
+        );
+      } else {
+        state.individual_services.push(service);
+      }
+      state.individual_total = state.individual_services.reduce(
+        (total, item) => total + item.price,
+        0
+      );
+    },
   },
 });
 
@@ -51,6 +75,9 @@ export const {
   defineTheme,
   toggleOffcanvas,
   toggleRegisterModal,
+  setServices,
+  setIndividualServices,
+  toggleQuestionModal,
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;

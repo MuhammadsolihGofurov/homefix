@@ -18,6 +18,7 @@ export default function Register() {
   const [reqLoading, setReqLoading] = useState(false);
   const [formError, setFormError] = useState(null);
   const dispatch = useDispatch();
+  const { individual_services } = useSelector((state) => state.settings);
   const {
     register,
     handleSubmit,
@@ -40,6 +41,10 @@ export default function Register() {
     // formData.append("message", data.message);
     // formData.append("type", "membership");
     const unmaskPhone = unmaskPhoneNumber(phone);
+    const services =
+      individual_services?.length !== 0
+        ? individual_services?.map((p, i) => p?.id).join(", ")
+        : null;
 
     const plan_id = Number(localStorage.getItem("plans__duration"));
 
@@ -55,6 +60,7 @@ export default function Register() {
       phone,
       plan_id,
       address,
+      services: `${services}`,
     };
 
     try {
@@ -70,10 +76,10 @@ export default function Register() {
         showConfirmButton: false,
       });
 
-      setTimeout(() => {
-        router.reload();
-      }, 2000);
-      reset();
+      // setTimeout(() => {
+      //   router.reload();
+      // }, 2000);
+      // reset();
     } catch (e) {
       setTimeout(() => {
         console.error(e);
@@ -122,6 +128,7 @@ export default function Register() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="stroke-primary"
             />
             <path
               d="M1.42419 1.08484L13.4242 13.0848"
@@ -129,6 +136,7 @@ export default function Register() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="stroke-primary"
             />
           </svg>
         </button>

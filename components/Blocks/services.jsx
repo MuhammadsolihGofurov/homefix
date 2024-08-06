@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Heading } from "..";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { setServices } from "@/redux/slice/settings";
 
 export default function Services() {
   const intl = useIntl();
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const { data: services } = useSWR(["services", router.locale], (url) =>
     fetcher(url, {
@@ -17,6 +20,10 @@ export default function Services() {
       },
     })
   );
+
+  useEffect(() => {
+    dispatch(setServices(services?.data));
+  }, [services?.data]);
 
   if (!services?.data || services?.data?.length == 0) {
     return null;

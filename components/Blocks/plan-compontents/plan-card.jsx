@@ -1,6 +1,7 @@
 import React from "react";
 import toast from "react-hot-toast";
 import { useIntl } from "react-intl";
+import { useSelector } from "react-redux";
 
 export default function PlanCard({
   type,
@@ -15,6 +16,7 @@ export default function PlanCard({
   const image = isType ? "/images/corporate.png" : "/images/individual.png";
   const plan = isType ? 0 : 1;
   const plansType = plan == 0 ? "corporate" : "individual";
+  const { individual_total } = useSelector((state) => state.settings);
 
   const changePlan = (id) => {
     toast.success(intl.formatMessage({ id: "successPlanChanged" }));
@@ -39,7 +41,9 @@ export default function PlanCard({
       </div>
       <div className="flex flex-col gap-3">
         <h3 className="text-2xl sm:text-5xl font-bold text-primary">
-          {data?.amount}{" "}
+          {individual_total !== 0 && type == "individual"
+            ? individual_total
+            : data?.amount}{" "}
           <span className="text-sm sm:text-lg">
             {intl.formatMessage({ id: "sum" })}
           </span>

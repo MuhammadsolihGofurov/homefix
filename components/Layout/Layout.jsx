@@ -1,7 +1,14 @@
 import i18nextConfig from "../../next.config";
 import Head from "next/head";
 import Script from "next/script";
-import { Footer, Header, Loading, Offcanvas, Scripts } from "../../components";
+import {
+  Footer,
+  Header,
+  Loading,
+  Offcanvas,
+  QuestionModal,
+  Scripts,
+} from "../../components";
 import useSWR from "swr";
 import fetcher from "../../utils/fetcher";
 import { useRouter } from "next/router";
@@ -13,6 +20,7 @@ import {
   setSocials,
 } from "@/redux/slice/settings";
 import Register from "../Modal/register";
+import QuestionShape from "../custom/question-shape";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -114,6 +122,8 @@ const Layout = ({ children }) => {
 
           {/* Modal */}
           <Register />
+          <QuestionModal />
+          <QuestionShape />
         </div>
       </div>
 
@@ -121,8 +131,8 @@ const Layout = ({ children }) => {
       {/* <NavBottom /> */}
 
       {/* Scripts */}
-      <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></Script>
-      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></Script>
+      {/* <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></Script>
+      <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></Script> */}
 
       {/* {settings && <Scripts settings={settings} />} */}
     </>
