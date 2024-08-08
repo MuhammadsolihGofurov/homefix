@@ -44,7 +44,7 @@ export default function QuestionModal() {
     >
       <div
         className={`modal__box bg-nav px-7 xs:px-10 pt-20 pb-10 w-full md:w-[700px] rounded-3xl relative ${
-          questionModal ? "scale-100" : "scale-50"
+          questionModal ? "scale-100 visible" : "scale-0 invisible"
         } transition-transform duration-200 `}
         onClick={(e) => e.stopPropagation()}
       >

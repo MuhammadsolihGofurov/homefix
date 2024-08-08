@@ -1,5 +1,5 @@
 import { useIntl } from "react-intl";
-import axios from "../../utils/axios";
+import axios from "@/utils/axios";
 import React from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
@@ -7,9 +7,6 @@ import Seo from "@/components/Seo/Seo";
 import { Breadcrumbs } from "@/components";
 
 function page({ info, params }) {
-  const intl = useIntl();
-  const router = useRouter();
-  const dispatch = useDispatch();
   return (
     <>
       <Seo

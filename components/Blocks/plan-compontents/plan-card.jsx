@@ -42,7 +42,7 @@ export default function PlanCard({
       <div className="flex flex-col gap-3">
         <h3 className="text-2xl sm:text-5xl font-bold text-primary">
           {individual_total !== 0 && type == "individual"
-            ? individual_total
+            ? individual_total + data?.amount
             : data?.amount}{" "}
           <span className="text-sm sm:text-lg">
             {intl.formatMessage({ id: "sum" })}

@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 import Button from "@/components/Button/main-button";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleRegisterModal } from "@/redux/slice/settings";
+import { setTotalSum, toggleRegisterModal } from "@/redux/slice/settings";
 import PlanServices from "./plan-services";
 
 export default function PlansBox({ plans }) {

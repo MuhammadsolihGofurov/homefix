@@ -21,7 +21,6 @@ export default function PlanServices() {
 
   return (
     <div className="flex flex-col gap-3">
-      {console.log(individual_services)}
       {services?.map((item, index) => {
         return (
           <div className="flex flex-col gap-1" key={index}>
@@ -69,7 +68,7 @@ export default function PlanServices() {
                   <Checkbox
                     label={p?.title}
                     key={i}
-                    name={p?.title}
+                    name={p?.id}
                     checked={individual_services.some(
                       (item) => item.id === p.id
                     )}

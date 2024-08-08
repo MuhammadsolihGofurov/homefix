@@ -76,10 +76,10 @@ export default function Register() {
         showConfirmButton: false,
       });
 
-      // setTimeout(() => {
-      //   router.reload();
-      // }, 2000);
-      // reset();
+      setTimeout(() => {
+        router.reload();
+      }, 2000);
+      reset();
     } catch (e) {
       setTimeout(() => {
         console.error(e);
@@ -106,7 +106,7 @@ export default function Register() {
     >
       <div
         className={`modal__box bg-nav px-7 xs:px-10 pt-20 pb-10 w-full md:w-[650px] rounded-3xl relative ${
-          registerModal ? "scale-100" : "scale-50"
+          registerModal ? "scale-100 visible" : "scale-0 invisible"
         } transition-transform duration-200`}
         onClick={(e) => e.stopPropagation()}
       >
