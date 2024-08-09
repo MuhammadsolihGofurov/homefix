@@ -10,20 +10,20 @@ function page({ info, params }) {
   return (
     <>
       <Seo
-        title={info?.seo_title}
-        description={info?.seo_description}
-        keywords={info?.seo_keywords}
+        title={info?.data?.seo_title}
+        description={info?.data?.seo_description}
+        keywords={info?.data?.seo_keywords}
       />
       <main className="pt-20 sm:pt-[100px]">
         <Breadcrumbs
           links={[
             {
               id: 1,
-              name: info?.title,
-              url: `service/${info?.id}`,
+              name: info?.data?.title,
+              url: `service/${info?.data?.id}`,
             },
           ]}
-          title={info?.title}
+          title={info?.data?.title}
         />
         <section className="container">
           <div className="flex flex-col gap-10 lg:gap-16 pb-20 lg:pb-[120px]">
@@ -32,7 +32,7 @@ function page({ info, params }) {
               data-aos-delay="100"
               className={`text-text-50 text-base sm:text-lg leading-5 sm:leading-6`}
               dangerouslySetInnerHTML={{
-                __html: info?.description,
+                __html: info?.data?.description,
               }}
             ></div>
             <div
@@ -40,7 +40,7 @@ function page({ info, params }) {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              {info?.advantages?.map((item, index) => {
+              {info?.data?.advantages?.map((item, index) => {
                 return (
                   <div
                     className="flex items-center gap-3 font-semibold text-primary"
@@ -87,9 +87,9 @@ function page({ info, params }) {
               data-fancybox="about"
               data-aos="fade-up"
               data-aos-delay="200"
-              href={info?.video_url}
+              href={info?.data?.video_url}
               style={{
-                backgroundImage: `url(${info?.video_bg})`,
+                backgroundImage: `url(${info?.data?.video_bg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -119,7 +119,7 @@ function page({ info, params }) {
 export async function getServerSideProps({ params, locale }) {
   // fetch product
   const info = await axios
-    .get(`services/${params?.id?.[0]}/`, {
+    .get(`services/${params?.id?.[0]}`, {
       headers: {
         "Accept-Language": locale,
       },
@@ -135,7 +135,7 @@ export async function getServerSideProps({ params, locale }) {
 
   return {
     props: {
-      info: info?.data,
+      info: info,
       params,
     },
   };
