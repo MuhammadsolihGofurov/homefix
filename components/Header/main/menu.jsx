@@ -43,11 +43,11 @@ export default function Menu() {
   return (
     <div className="2xl:flex hidden items-center gap-12">
       {data?.map((item, index) => (
-        <Link href={item.url} key={item.title}>
+        <a href={item.url} key={item.title}>
           <span className="text-primary font-semibold text-base cursor-pointer hover:text-main">
             {item.title}
           </span>
-        </Link>
+        </a>
       ))}
     </div>
   );

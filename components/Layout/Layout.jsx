@@ -95,7 +95,7 @@ const Layout = ({ children }) => {
               key={i}
               rel="alternate"
               hrefLang={locale}
-              href="https://api.idea.inweb.uz"
+              href="https://api.homefixuz.com"
             />
           );
         })}

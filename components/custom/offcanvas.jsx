@@ -75,9 +75,9 @@ export default function Offcanvas() {
                 className="link__hover"
                 onClick={() => dispatch(toggleOffcanvas())}
               >
-                <Link href={item?.url}>
+                <a href={item?.url}>
                   <span className="text-primary cursor-pointer">{item?.title}</span>
-                </Link>
+                </a>
               </li>
             );
           })}
