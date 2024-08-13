@@ -50,7 +50,7 @@ export default function Register() {
 
     const registerData = {
       name,
-      phone: `+998${unmaskPhone}`,
+      phone: `${phone}`,
       email,
       password,
     };

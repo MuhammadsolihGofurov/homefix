@@ -34,6 +34,11 @@ export default function Offcanvas() {
     },
     {
       id: 5,
+      title: intl.formatMessage({ id: "careerTitle" }),
+      url: `/${router.locale}/career`,
+    },
+    {
+      id: 6,
       title: intl.formatMessage({ id: "contact" }),
       url: `/${router.locale}/contact`,
     },

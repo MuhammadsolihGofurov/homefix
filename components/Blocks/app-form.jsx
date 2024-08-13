@@ -89,7 +89,7 @@ export default function AppForm({ page }) {
         required
       />
       <Input
-        type={"number"}
+        type={"tel"}
         register={register}
         name={"phone"}
         placeholder={intl.formatMessage({ id: "phoneInput" })}
