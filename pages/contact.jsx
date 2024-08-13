@@ -27,7 +27,7 @@ export default function Contact() {
         description={seo?.data?.seo_contact_description}
         body={seo?.data?.seo_contact_keywords}
       />
-      <Breadcrumbs
+      {/* <Breadcrumbs
         links={[
           {
             id: 1,
@@ -162,7 +162,7 @@ export default function Contact() {
             <></>
           )}
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
