@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 import { useSelector } from "react-redux";
 import useSWR from "swr";
 
-export default function Contact() {
+export default function us() {
   const router = useRouter();
   const intl = useIntl();
   const { settings } = useSelector((state) => state.settings);

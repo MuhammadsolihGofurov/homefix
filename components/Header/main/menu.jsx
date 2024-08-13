@@ -36,14 +36,14 @@ export default function Menu() {
     {
       id: 6,
       title: intl.formatMessage({ id: "contact" }),
-      url: `/${router.locale}/contact`,
+      url: `/${router.locale}/us`,
     },
   ];
 
   return (
     <div className="2xl:flex hidden items-center gap-12">
       {data?.map((item, index) => (
-        <a href={item.url} key={item.title}>
+        <a href={item.url} key={item.title} title={item?.title}>
           <span className="text-primary font-semibold text-base cursor-pointer hover:text-main">
             {item.title}
           </span>
