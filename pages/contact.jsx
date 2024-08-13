@@ -1,4 +1,4 @@
-// import { AppForm, Breadcrumbs, FAQ, Opinions } from "@/components";
+import { AppForm, Breadcrumbs, FAQ, Opinions } from "@/components";
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
