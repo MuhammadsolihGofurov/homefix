@@ -36,7 +36,7 @@ export default function Menu() {
     {
       id: 6,
       title: intl.formatMessage({ id: "contact" }),
-      url: `/${router.locale}/us`,
+      url: `/${router.locale}/contact`,
     },
   ];
 

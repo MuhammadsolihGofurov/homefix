@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 import { useSelector } from "react-redux";
 import useSWR from "swr";
 
-export default function us() {
+export default function Contact() {
   const router = useRouter();
   const intl = useIntl();
   const { settings } = useSelector((state) => state.settings);
@@ -22,12 +22,12 @@ export default function us() {
 
   return (
     <main className="pt-20 md:pt-[100px]">
-      {/* <Seo
+      <Seo
         title={seo?.data?.seo_contact_title}
         description={seo?.data?.seo_contact_description}
         body={seo?.data?.seo_contact_keywords}
-      /> */}
-      {/* <Breadcrumbs
+      />
+      <Breadcrumbs
         links={[
           {
             id: 1,
@@ -162,7 +162,7 @@ export default function us() {
             <></>
           )}
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }
