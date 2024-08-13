@@ -1,4 +1,4 @@
-import { AppForm, Breadcrumbs, FAQ, Opinions } from "@/components";
+// import { AppForm, Breadcrumbs, FAQ, Opinions } from "@/components";
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
@@ -22,11 +22,11 @@ export default function Contact() {
 
   return (
     <main className="pt-20 md:pt-[100px]">
-      <Seo
+      {/* <Seo
         title={seo?.data?.seo_contact_title}
         description={seo?.data?.seo_contact_description}
         body={seo?.data?.seo_contact_keywords}
-      />
+      /> */}
       {/* <Breadcrumbs
         links={[
           {

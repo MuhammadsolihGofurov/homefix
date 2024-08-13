@@ -1,15 +1,11 @@
 User-Agent: *
-Disallow: /*compare
-Disallow: /*login
-Disallow: /*cart
-Disallow: /*profile
-Disallow: /*wishlist
-Disallow: /*?quantity=
-Disallow: /*sort=
-Disallow: /*price
-Disallow: /*register
-Disallow: /*search
-Disallow: /*?sort=
-Disallow: /*page
+Disallow: /*index
+Disallow: /*about
+Disallow: /*career
+Disallow: /*contact
+Disallow: /*faqs
+Disallow: /*reviews
+Disallow: /*services
+Disallow: /*service
 
 Sitemap: must be a link
