@@ -27,13 +27,13 @@ export default function Heading({
         >
           {body}
         </p>
-        <h3
+        <h1
           className="text-primary uppercase font-extrabold text-xl sm:text-3xl 2xl:text-5xl"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           {title}
-        </h3>
+        </h1>
       </div>
       {type == "button" ? (
         <a href={link} className="lg:block hidden" data-aos="fade-up">
