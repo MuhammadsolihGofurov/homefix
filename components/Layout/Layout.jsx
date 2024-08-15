@@ -21,6 +21,7 @@ import {
 } from "@/redux/slice/settings";
 import Register from "../Modal/register";
 import QuestionShape from "../custom/question-shape";
+import ParticlesBackground from "../custom/ParticlesBackground";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -105,7 +106,7 @@ const Layout = ({ children }) => {
       {/* <Sprites /> */}
 
       {/* Body */}
-      <div className={`wrapper ${theme} bg-bg`}>
+      <div className={`wrapper relative z-10 ${theme} bg-bg`}>
         <div className="app">
           {/* Header */}
           <Header />
@@ -124,7 +125,10 @@ const Layout = ({ children }) => {
           <Register />
           <QuestionModal />
           <QuestionShape />
+
+          {/* Particles js */}
         </div>
+        <ParticlesBackground />
       </div>
 
       {/* Nav Bottom */}

@@ -46,6 +46,16 @@
 ::selection {
   color: #222;
   background: #26bdbe;
+  /* color: #26bebe17; */
+}
+
+#tsparticles{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100vh;
 }
 
 /* width */

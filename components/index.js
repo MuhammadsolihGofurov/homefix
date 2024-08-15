@@ -25,6 +25,7 @@ export { default as FAQ } from "./Blocks/faqs";
 export { default as Partners } from "./Blocks/partners";
 export { default as Breadcrumbs } from "./Blocks/breadcrumbs";
 export { default as AppForm } from "./Blocks/app-form";
+export { default as WorkStep } from "./Blocks/work-steps";
 
 // Parts
 export { default as Heading } from "./Parts/heading";

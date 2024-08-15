@@ -10,6 +10,8 @@ function page({ info }) {
         title={info?.data?.seo_title}
         description={info?.data?.seo_description}
         keywords={info?.data?.seo_keywords}
+        image={info?.data?.video_bg}
+        type={"service"}
       />
       <main className="pt-20 sm:pt-[100px]">
         <Breadcrumbs

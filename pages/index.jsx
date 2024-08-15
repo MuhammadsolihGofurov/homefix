@@ -7,6 +7,7 @@ import {
   Partners,
   Services,
   WhatDoWe,
+  WorkStep,
 } from "@/components";
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
@@ -45,6 +46,7 @@ export default function Home() {
         <AboutSection />
         <MembershipPlan/>
         <Services />
+        <WorkStep />
         <Opinions />
         <FAQ />
         <Partners />

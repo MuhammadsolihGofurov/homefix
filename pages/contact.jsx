@@ -1,4 +1,4 @@
-import { AppForm, Breadcrumbs, FAQ, Opinions } from "@/components";
+import { AppForm, Breadcrumbs } from "@/components";
 import Seo from "@/components/Seo/Seo";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
@@ -7,7 +7,7 @@ import { useIntl } from "react-intl";
 import { useSelector } from "react-redux";
 import useSWR from "swr";
 
-export default function Contact() {
+export default function contact() {
   const router = useRouter();
   const intl = useIntl();
   const { settings } = useSelector((state) => state.settings);
