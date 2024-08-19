@@ -6,7 +6,7 @@ export default function QuestionShape() {
   const dispatch = useDispatch();
   return (
     <button
-      className="fixed bottom-10 right-10 w-14 h-14 bg-[#1d8282] rounded-full flex items-center justify-center after:w-20 after:h-20 after:absolute after:-top-3 after:-left-3 after:rounded-full after:bg-main after:opacity-50 after:z-[-1] after:animate-ping"
+      className="fixed bottom-10 right-10 w-14 h-14 bg-[#1d8282] rounded-full flex items-center justify-center after:w-20 after:h-20 after:absolute after:-top-3 after:-left-3 after:rounded-full after:bg-main after:opacity-50 after:z-[-1] after:animate-ping z-10"
       onClick={() => dispatch(toggleQuestionModal())}
     >
       <svg

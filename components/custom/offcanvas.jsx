@@ -20,7 +20,7 @@ export default function Offcanvas() {
     {
       id: 2,
       title: intl.formatMessage({ id: "pricing" }),
-      url: `/${router.locale}/?#pricing`,
+      url: `/${router.locale}/prices`,
     },
     {
       id: 3,
@@ -62,6 +62,7 @@ export default function Offcanvas() {
             <path
               d="M19 15.2896C19 15.716 18.8507 16.0786 18.5522 16.3771L16.3771 18.5522C16.0786 18.8507 15.716 19 15.2896 19C14.8631 19 14.5006 18.8507 14.202 18.5522L9.5 13.8502L4.79798 18.5522C4.49944 18.8507 4.13692 19 3.71044 19C3.28395 19 2.92144 18.8507 2.6229 18.5522L0.447811 16.3771C0.14927 16.0786 0 15.716 0 15.2896C0 14.8631 0.14927 14.5006 0.447811 14.202L5.14983 9.5L0.447811 4.79798C0.14927 4.49944 0 4.13692 0 3.71044C0 3.28395 0.14927 2.92144 0.447811 2.6229L2.6229 0.447811C2.92144 0.14927 3.28395 0 3.71044 0C4.13692 0 4.49944 0.14927 4.79798 0.447811L9.5 5.14983L14.202 0.447811C14.5006 0.14927 14.8631 0 15.2896 0C15.716 0 16.0786 0.14927 16.3771 0.447811L18.5522 2.6229C18.8507 2.92144 19 3.28395 19 3.71044C19 4.13692 18.8507 4.49944 18.5522 4.79798L13.8502 9.5L18.5522 14.202C18.8507 14.5006 19 14.8631 19 15.2896Z"
               fill="#242424"
+              className="fill-primary"
             />
           </svg>
         </button>
@@ -76,7 +77,9 @@ export default function Offcanvas() {
                 onClick={() => dispatch(toggleOffcanvas())}
               >
                 <a href={item?.url}>
-                  <span className="text-primary cursor-pointer">{item?.title}</span>
+                  <span className="text-primary cursor-pointer">
+                    {item?.title}
+                  </span>
                 </a>
               </li>
             );

@@ -6,7 +6,7 @@ import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
 import { PlansBox } from "./plan-compontents";
 
-export default function MembershipPlan() {
+export default function MembershipPlan({ isTitle = true }) {
   const intl = useIntl();
   const router = useRouter();
 
@@ -25,11 +25,15 @@ export default function MembershipPlan() {
   return (
     <section id="pricing" className="pb-16 sm:py-20 lg:py-[120px]">
       <div className="container flex flex-col gap-10 lg:gap-20">
-        <Heading
-          title={intl.formatMessage({ id: "membershipTitle" })}
-          body={intl.formatMessage({ id: "membershipBody" })}
-          type="center"
-        />
+        {isTitle ? (
+          <Heading
+            title={intl.formatMessage({ id: "membershipTitle" })}
+            body={intl.formatMessage({ id: "membershipBody" })}
+            type="center"
+          />
+        ) : (
+          <></>
+        )}
         <PlansBox plans={data?.data} />
       </div>
     </section>

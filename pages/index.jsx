@@ -10,21 +10,22 @@ import {
   WorkStep,
 } from "@/components";
 import Seo from "@/components/Seo/Seo";
+import axios from "@/utils/axios";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import useSWR from "swr";
 
-export default function Home() {
+function page({ info }) {
   const router = useRouter();
 
-  const { data: seo } = useSWR(["seo", router.locale], (url) =>
-    fetcher(url, {
-      headers: {
-        "Accept-Language": router.locale,
-      },
-    })
-  );
+  // const { data: seo } = useSWR(["seo", router.locale], (url) =>
+  //   fetcher(url, {
+  //     headers: {
+  //       "Accept-Language": router.locale,
+  //     },
+  //   })
+  // );
 
   useEffect(() => {
     const hash = router.asPath.split("#")[1];
@@ -36,15 +37,15 @@ export default function Home() {
   return (
     <>
       <Seo
-        title={seo?.data?.seo_home_title}
-        description={seo?.data?.seo_home_description}
-        body={seo?.data?.seo_home_keywords}
+        title={info?.data?.seo_home_title}
+        description={info?.data?.seo_home_description}
+        body={info?.data?.seo_home_keywords}
       />
       <main>
         <HomeBanner />
         <WhatDoWe />
         <AboutSection />
-        <MembershipPlan/>
+        <MembershipPlan />
         <Services />
         <WorkStep />
         <Opinions />
@@ -54,3 +55,29 @@ export default function Home() {
     </>
   );
 }
+
+export async function getServerSideProps({ params, locale }) {
+  // fetch product
+  const info = await axios
+    .get(`seo`, {
+      headers: {
+        "Accept-Language": locale,
+      },
+    })
+    .then((res) => res?.data)
+    .catch((err) => console.error(err));
+
+  if (!info) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      info: info,
+    },
+  };
+}
+
+export default page;

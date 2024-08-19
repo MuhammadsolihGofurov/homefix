@@ -32,7 +32,7 @@ export default function WorkSteps() {
           />
         </div>
         <div
-          className="w-full max-w-[1520px] 8xl:px-0 px-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 6xl:grid-cols-4 gap-4"
+          className="w-full max-w-[1520px] 8xl:px-0 px-5 mx-auto flex flex-wrap md:flex-nowrap gap-3 lg:gap-4 justify-center items-center"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -40,7 +40,7 @@ export default function WorkSteps() {
             <a
               href={item?.link}
               key={index}
-              className="block w-full h-[400px] md:h-[500px] lg:h-[580px] 6xl:h-[540px] rounded-xl overflow-hidden"
+              className="block w-full sm:w-[360px] md:h-[300px] lg:h-[400px] 2xl:h-[480px] 6xl:h-[540px] rounded-xl overflow-hidden"
             >
               <img
                 className="w-full h-full object-cover"
