@@ -7,18 +7,20 @@ import {
   ServiceCard,
 } from "@/components";
 import Seo from "@/components/Seo/Seo";
+import { setServices } from "@/redux/slice/settings";
 import axios from "@/utils/axios";
 import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { useIntl } from "react-intl";
 import Skeleton from "react-loading-skeleton";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import useSWR from "swr";
 
 function Prices({ info }) {
   const router = useRouter();
   const intl = useIntl();
+  const dispatch = useDispatch();
   const { settings } = useSelector((state) => state.settings);
 
   // const { data: seo } = useSWR(["seo", router.locale], (url) =>
@@ -28,6 +30,18 @@ function Prices({ info }) {
   //     },
   //   })
   // );
+
+  const { data: services } = useSWR(["services", router.locale], (url) =>
+    fetcher(url, {
+      headers: {
+        "Accept-Language": router.locale,
+      },
+    })
+  );
+
+  useEffect(() => {
+    dispatch(setServices(services?.data));
+  }, [services?.data]);
 
   return (
     <main className="pt-20 md:pt-[100px]">

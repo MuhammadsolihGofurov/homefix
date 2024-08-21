@@ -5,25 +5,22 @@ import { useRouter } from "next/router";
 import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setServices } from "@/redux/slice/settings";
 
 export default function Services() {
   const intl = useIntl();
   const router = useRouter();
   const dispatch = useDispatch();
+  const { services } = useSelector((state) => state.settings);
 
-  const { data: services } = useSWR(["services", router.locale], (url) =>
-    fetcher(url, {
-      headers: {
-        "Accept-Language": router.locale,
-      },
-    })
-  );
-
-  useEffect(() => {
-    dispatch(setServices(services?.data));
-  }, [services?.data]);
+  // const { data: services } = useSWR(["services", router.locale], (url) =>
+  //   fetcher(url, {
+  //     headers: {
+  //       "Accept-Language": router.locale,
+  //     },
+  //   })
+  // );
 
   if (!services?.data || services?.data?.length == 0) {
     return null;
