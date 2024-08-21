@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
       <Head>
         {/* meta tags */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="Idea.uz" />
+        <meta name="author" content="HomeFixuz.com" />
         <meta name="robots" content="index, follow, noodp" />
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
