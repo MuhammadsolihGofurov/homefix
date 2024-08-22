@@ -5,9 +5,8 @@ import fetcher from "@/utils/fetcher";
 import { useRouter } from "next/router";
 import React from "react";
 import { useIntl } from "react-intl";
-import useSWR from "swr";
 
-function About() {
+function About({info}) {
   const router = useRouter();
   const intl = useIntl();
 
