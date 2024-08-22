@@ -22,7 +22,7 @@ export default function Services() {
   //   })
   // );
 
-  if (!services?.data || services?.data?.length == 0) {
+  if (!services || services?.length == 0) {
     return null;
   }
 
@@ -44,7 +44,7 @@ export default function Services() {
         className="flex gap-0 min-h-[400px] sm:min-h-[600px] lg:min-h-[720px]"
         data-aos="fade-up"
       >
-        {services?.data?.slice(0, 5).map((item, index) => {
+        {services?.slice(0, 5).map((item, index) => {
           return (
             <a
               href={`/${router.locale}/service/${item?.id}`}

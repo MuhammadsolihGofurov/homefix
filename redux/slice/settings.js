@@ -13,6 +13,7 @@ const settingsSlice = createSlice({
     individual_services: [],
     individual_total: 0,
     questionModal: false,
+    sendQuestionModal: false,
   },
   reducers: {
     setSettingsInfo: (state, action) => {
@@ -47,6 +48,9 @@ const settingsSlice = createSlice({
     toggleQuestionModal: (state, action) => {
       state.questionModal = !state.questionModal;
     },
+    toggleSendQuestionModal: (state, action) => {
+      state.sendQuestionModal = !state.sendQuestionModal;
+    },
     setServices: (state, action) => {
       state.services = action.payload;
     },
@@ -78,6 +82,7 @@ export const {
   setServices,
   setIndividualServices,
   toggleQuestionModal,
+  toggleSendQuestionModal
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;

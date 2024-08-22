@@ -71,6 +71,8 @@
   "passwordInput": "Parol",
   "locationInput": "Manzil",
   "resumeInput": "Resumeni yuklang.",
+  "usernameInput": "Telefon nomer yoki Elektron pochta",
+  "questionInput": "Savolingizni yozing",
   "--input--": "",
   "--message": "",
   "successResumeTitle": "Muvaffaqiyatli",
@@ -79,5 +81,11 @@
   "successMonthsChanged": "Muddat o'zgartirdingiz.",
   "successMembershipTitle": "Muvaffaqiyatli",
   "successMembershipBody": "Ajoyib , ma'lumotlaringiz yuborildi. Biz tez orada sizga aloqaga chiqamiz.",
-  "--message--": ""
+  "successQuestionTitle": "Muvaffaqiyatli",
+  "successQuestionBody": "Ajoyib , ma'lumotlaringiz yuborildi. Biz tez orada sizga aloqaga chiqamiz.",
+  "--message--": "",
+  "--question": "",
+  "questionModalBody": "Savolingiz bormi ?",
+  "questionModalButton": "Savol yozish",
+  "--question--": ""
 }

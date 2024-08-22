@@ -47,3 +47,4 @@ export { default as Checkbox } from "./custom/checkbox";
 // modal
 export { default as Modal } from "./Modal/register";
 export { default as QuestionModal } from "./Modal/question";
+export { default as SendQuestionModal } from "./Modal/send-question";

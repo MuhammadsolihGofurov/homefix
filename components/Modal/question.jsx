@@ -8,7 +8,10 @@ import Textarea from "../custom/textarea";
 import Button from "../Button/main-button";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleQuestionModal } from "@/redux/slice/settings";
+import {
+  toggleQuestionModal,
+  toggleSendQuestionModal,
+} from "@/redux/slice/settings";
 import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
 
@@ -44,7 +47,7 @@ export default function QuestionModal() {
     >
       <div
         className={`modal__box bg-nav px-7 xs:px-10 pt-20 pb-10 w-full md:w-[700px] rounded-3xl relative ${
-          questionModal ? "scale-100 visible" : "scale-0 invisible"
+          questionModal ? "scale-100 visible" : "scale-25 invisible"
         } transition-transform duration-200 `}
         onClick={(e) => e.stopPropagation()}
       >
@@ -80,7 +83,23 @@ export default function QuestionModal() {
         </button>
 
         <div className="w-full flex flex-col items-center justify-center text-center pb-5">
-          <h3 className="font-semibold text-lg">{intl.formatMessage({ id: "questionTitle" })}</h3>
+          <h3 className="font-semibold text-lg">
+            {intl.formatMessage({ id: "questionTitle" })}
+          </h3>
+          <p className="text-secondary">
+            {" "}
+            {intl.formatMessage({ id: "questionModalBody" })}{" "}
+            <button
+              type="button"
+              className="text-main underline"
+              onClick={() => {
+                dispatch(toggleSendQuestionModal());
+                dispatch(toggleQuestionModal());
+              }}
+            >
+              {intl.formatMessage({ id: "questionModalButton" })}
+            </button>
+          </p>
         </div>
 
         <div className="h-[320px] overflow-y-scroll pr-2 flex flex-col gap-3 modal__questions">

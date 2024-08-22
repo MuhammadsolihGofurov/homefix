@@ -69,11 +69,21 @@
   "emailInput": "Электронная почта",
   "passwordInput": "Пароль",
   "resumeInput": "Загрузите резюме.",
+  "usernameInput": "Номер телефона или адрес электронной почты",
+  "questionInput": "Напишите свой вопрос",
   "--input--": "",
   "--message": "",
   "successResumeTitle": "Успешно",
   "successResumeBody": "Отлично, ваша информация отправлена. Мы свяжемся с вами в ближайшее время.",
   "successPlanChanged": "Вы успешно изменили тариф.",
   "successMonthsChanged": "Вы изменили срок.",
-  "--message--": ""
+  "successMembershipTitle": "Успешно",
+  "successMembershipBody": "Отлично, ваша информация отправлена. Мы свяжемся с вами в ближайшее время.",
+  "successQuestionTitle": "Успешно",
+  "successQuestionBody": "Отлично, ваша информация отправлена. Мы свяжемся с вами в ближайшее время.",
+  "--message--": "",
+  "--question": "",
+  "questionModalBody": "У вас есть вопрос?",
+  "questionModalButton": "Написать вопрос",
+  "--question--": ""
 }

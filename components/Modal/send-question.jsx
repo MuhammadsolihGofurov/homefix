@@ -8,13 +8,14 @@ import Textarea from "../custom/textarea";
 import Button from "../Button/main-button";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleRegisterModal } from "@/redux/slice/settings";
-import { unmaskPhoneNumber } from "@/utils/funcs";
+import {
+  toggleSendQuestionModal,
+} from "@/redux/slice/settings";
 
-export default function Register() {
+export default function SendQuestionModal() {
   const router = useRouter();
   const intl = useIntl();
-  const { registerModal } = useSelector((state) => state.settings);
+  const { sendQuestionModal } = useSelector((state) => state.settings);
   const [reqLoading, setReqLoading] = useState(false);
   const [formError, setFormError] = useState(null);
   const dispatch = useDispatch();
@@ -26,51 +27,25 @@ export default function Register() {
     reset,
   } = useForm({
     defaultValues: {
-      name: "",
-      username: "",
-      message: "",
-      password: "",
+      question: "",
+      phone: "",
     },
   });
 
   const submitFn = async (data) => {
-    const { name, username, address, email, password } = data;
-    // const formData = new FormData();
-    // formData.append("name", data.name);
-    // formData.append("phone", data.phone);
-    // formData.append("message", data.message);
-    // formData.append("type", "membership");
-    // const unmaskPhone = unmaskPhoneNumber(phone);
-    const services =
-      individual_services?.length !== 0
-        ? individual_services?.map((p, i) => p?.id).join(", ")
-        : null;
+    const { question, phone } = data;
 
-    const plan_id = Number(localStorage.getItem("plans__duration"));
-
-    // phone: `${phone}`,
-    // email,
     const registerData = {
-      name,
-      username,
-      password,
-    };
-
-    const orderData = {
-      name,
-      phone: username,
-      plan_id,
-      address,
-      services: `${services}`,
+      phone,
+      question,
     };
 
     try {
       setReqLoading(true);
-      const register = await axios.post("user/register", registerData);
-      const order = await axios.post("order", orderData);
+      const question = await axios.post("send/question", registerData);
       Swal.fire({
-        title: intl.formatMessage({ id: "successMembershipTitle" }),
-        text: intl.formatMessage({ id: "successMembershipBody" }),
+        title: intl.formatMessage({ id: "successQuestionTitle" }),
+        text: intl.formatMessage({ id: "successQuestionBody" }),
         icon: "success",
         showCancelButton: false,
         showCloseButton: false,
@@ -101,20 +76,20 @@ export default function Register() {
   return (
     <div
       className={`modal fixed w-full h-screen top-0 left-0 z-[1000] bg-modalBg flex items-center justify-center p-5 overflow-y-scroll scroll__hidden ${
-        registerModal ? "opacity-100 visible" : "opacity-0 invisible"
+        sendQuestionModal ? "opacity-100 visible" : "opacity-0 invisible"
       } transition-opacity duration-150`}
-      onClick={() => dispatch(toggleRegisterModal())}
+      onClick={() => dispatch(toggleSendQuestionModal())}
     >
       <div
         className={`modal__box bg-nav px-7 xs:px-10 pt-20 pb-10 w-full sm:w-[500px] rounded-3xl relative ${
-          registerModal ? "scale-100 visible" : "scale-0 invisible"
+          sendQuestionModal ? "scale-100 visible" : "scale-0 invisible"
         } transition-transform duration-200`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"
           className="absolute top-7 right-7 xs:right-10"
-          onClick={() => dispatch(toggleRegisterModal())}
+          onClick={() => dispatch(toggleSendQuestionModal())}
         >
           <svg
             width="15"
@@ -148,19 +123,11 @@ export default function Register() {
           className="grid grid-cols-1 gap-2 sm:gap-3"
         >
           <Input
-            type={"text"}
+            type={"tel"}
             register={register}
-            name={"name"}
-            placeholder={intl.formatMessage({ id: "nameInput" })}
-            id="name"
-            required
-          />
-          <Input
-            type={"text"}
-            register={register}
-            name={"username"}
-            placeholder={intl.formatMessage({ id: "usernameInput" })}
-            id="username"
+            name={"phone"}
+            placeholder={intl.formatMessage({ id: "phoneInput" })}
+            id="phone"
             required
           />
           {/* <Input
@@ -171,24 +138,22 @@ export default function Register() {
             id="email"
             required
           /> */}
-          <Input
+          {/* <Input
             type={"password"}
             register={register}
             name={"password"}
             placeholder={intl.formatMessage({ id: "passwordInput" })}
             id="password"
             required
-          />
-          {/* <div className="sm:col-span-2"> */}
+          /> */}
           <Textarea
             type={"text"}
             register={register}
-            name={"address"}
-            placeholder={intl.formatMessage({ id: "locationInput" })}
-            id="address"
+            name={"question"}
+            placeholder={intl.formatMessage({ id: "questionInput" })}
+            id="question"
             required
           />
-          {/* </div> */}
           {/* <div className={`flex sm:col-span-2`}> */}
           <Button type="submit" isLoading={reqLoading}>
             {intl.formatMessage({ id: "send" })}

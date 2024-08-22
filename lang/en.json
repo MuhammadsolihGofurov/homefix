@@ -69,11 +69,21 @@
   "emailInput": "Email",
   "passwordInput": "Password",
   "resumeInput": "Upload your resume.",
+  "usernameInput": "Phone number or Email",
+  "questionInput": "Write your question",
   "--input--": "",
   "--message": "",
   "successResumeTitle": "Success",
   "successResumeBody": "Great, your information has been sent. We will contact you soon.",
   "successPlanChanged": "You have successfully changed the membership plan.",
   "successMonthsChanged": "You have changed duration.",
-  "--message--": ""
+  "successMembershipTitle": "Success",
+  "successMembershipBody": "Great, your information has been sent. We will contact you soon.",
+  "successQuestionTitle": "Success",
+  "successQuestionBody": "Great, your information has been sent. We will contact you soon.",
+  "--message--": "",
+  "--question": "",
+  "questionModalBody": "Do you have a question?",
+  "questionModalButton": "Write a question",
+  "--question--": ""
 }

@@ -8,6 +8,7 @@ import {
   Offcanvas,
   QuestionModal,
   Scripts,
+  SendQuestionModal,
 } from "../../components";
 import useSWR from "swr";
 import fetcher from "../../utils/fetcher";
@@ -125,6 +126,7 @@ const Layout = ({ children }) => {
           <Register />
           <QuestionModal />
           <QuestionShape />
+          <SendQuestionModal />
 
           {/* Particles js */}
         </div>
