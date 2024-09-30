@@ -281,11 +281,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between lg:flex-row flex-col gap-2 text-white pt-5 sm:pt-20 sm:text-start text-center">
+        <div className="flex items-center justify-center lg:flex-row flex-col gap-2 text-white pt-5 sm:pt-20 sm:text-start text-center">
           <p>{intl.formatMessage({ id: "copywrite" })}</p>
-          <a href="#" className="text-main">
+          {/* <a href="#" className="text-main">
             {intl.formatMessage({ id: "developed" })}
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>

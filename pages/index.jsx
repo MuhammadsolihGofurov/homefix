@@ -22,14 +22,6 @@ function page({ info }) {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  // const { data: seo } = useSWR(["seo", router.locale], (url) =>
-  //   fetcher(url, {
-  //     headers: {
-  //       "Accept-Language": router.locale,
-  //     },
-  //   })
-  // );
-
   const { data: services } = useSWR(["services", router.locale], (url) =>
     fetcher(url, {
       headers: {
