@@ -23,6 +23,7 @@ import {
 import Register from "../Modal/register";
 import QuestionShape from "../custom/question-shape";
 import ParticlesBackground from "../custom/ParticlesBackground";
+import ConfirmRegister from "../Modal/confirm-register";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -127,6 +128,7 @@ const Layout = ({ children }) => {
           <QuestionModal />
           <QuestionShape />
           <SendQuestionModal />
+          <ConfirmRegister />
 
           {/* Particles js */}
         </div>

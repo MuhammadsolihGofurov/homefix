@@ -14,6 +14,7 @@ const settingsSlice = createSlice({
     individual_total: 0,
     questionModal: false,
     sendQuestionModal: false,
+    registerConfirmModal: false,
   },
   reducers: {
     setSettingsInfo: (state, action) => {
@@ -68,6 +69,9 @@ const settingsSlice = createSlice({
         0
       );
     },
+    toggleRegisterConfirmModal: (state, action) => {
+      state.registerConfirmModal = !state.registerConfirmModal;
+    },
   },
 });
 
@@ -82,7 +86,8 @@ export const {
   setServices,
   setIndividualServices,
   toggleQuestionModal,
-  toggleSendQuestionModal
+  toggleSendQuestionModal,
+  toggleRegisterConfirmModal
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;
