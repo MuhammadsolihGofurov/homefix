@@ -40,7 +40,7 @@ function Contact({ info }) {
       />
       <div className="container flex flex-col gap-8">
         <div
-          className="text-primary opacity-50"
+          className="text-primary opacity-80"
           dangerouslySetInnerHTML={{
             __html: settings?.contact_us_texts,
           }}

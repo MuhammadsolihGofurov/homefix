@@ -10,6 +10,7 @@ import {
   WorkStep,
 } from "@/components";
 import Seo from "@/components/Seo/Seo";
+import ParticlesBackground from "@/components/custom/ParticlesBackground";
 import { setServices } from "@/redux/slice/settings";
 import axios from "@/utils/axios";
 import fetcher from "@/utils/fetcher";
@@ -58,6 +59,7 @@ function page({ info }) {
         <Opinions />
         <FAQ />
         <Partners />
+        <ParticlesBackground />
       </main>
     </>
   );

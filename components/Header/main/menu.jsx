@@ -15,6 +15,12 @@ export default function Menu() {
       current: "",
     },
     {
+      id: 4,
+      title: intl.formatMessage({ id: "aboutBody" }),
+      url: `/${router.locale}/about`,
+      current: "about",
+    },
+    {
       id: 2,
       title: intl.formatMessage({ id: "pricing" }),
       url: `/${router.locale}/prices`,
@@ -25,12 +31,6 @@ export default function Menu() {
       title: intl.formatMessage({ id: "services" }),
       url: `/${router.locale}/services`,
       current: "services",
-    },
-    {
-      id: 4,
-      title: intl.formatMessage({ id: "reviews" }),
-      url: `/${router.locale}/reviews`,
-      current: "reviews",
     },
     {
       id: 5,

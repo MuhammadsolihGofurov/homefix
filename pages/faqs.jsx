@@ -39,7 +39,7 @@ function faqs({ info }) {
       />
       <div className="container">
         <div
-          className="text-primary opacity-50 pb-16 sm:pb-20"
+          className="text-primary opacity-80 pb-16 sm:pb-20"
           dangerouslySetInnerHTML={{
             __html: settings?.faqs_texts,
           }}

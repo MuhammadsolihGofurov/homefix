@@ -48,7 +48,7 @@ export default function PlanCard({
             {intl.formatMessage({ id: "sum" })}
           </span>
         </h3>
-        <p className="text-primary opacity-75 font-medium sm:text-base text-sm">
+        <p className="text-primary opacity-75 font-medium sm:text-base text-sm w-full sm:w-3/5">
           {intl.formatMessage({ id: "corporateText" })}
         </p>
       </div>
@@ -90,7 +90,7 @@ export default function PlanCard({
         </svg>
       </div>
       {/* image */}
-      <div className="absolute bottom-0 right-5 -z-10 small:block hidden">
+      <div className="absolute bottom-0 right-5 -z-10 small:block hidden sm:opacity-100 opacity-50">
         <img
           src={image}
           alt={isType ? "corporate" : "individual"}

@@ -62,7 +62,7 @@ function Prices({ info }) {
       />{" "}
       <div className="container">
         <div
-          className="text-primary opacity-50 pb-5"
+          className="text-primary opacity-80 pb-5"
           dangerouslySetInnerHTML={{
             __html: settings?.membership_plan,
           }}

@@ -16,31 +16,37 @@ export default function Offcanvas() {
       id: 1,
       title: intl.formatMessage({ id: "home" }),
       url: `/${router.locale}`,
+      current: "",
+    },
+    {
+      id: 4,
+      title: intl.formatMessage({ id: "aboutBody" }),
+      url: `/${router.locale}/about`,
+      current: "about",
     },
     {
       id: 2,
       title: intl.formatMessage({ id: "pricing" }),
       url: `/${router.locale}/prices`,
+      current: "prices",
     },
     {
       id: 3,
       title: intl.formatMessage({ id: "services" }),
       url: `/${router.locale}/services`,
-    },
-    {
-      id: 4,
-      title: intl.formatMessage({ id: "reviews" }),
-      url: `/${router.locale}/reviews`,
+      current: "services",
     },
     {
       id: 5,
       title: intl.formatMessage({ id: "careerTitle" }),
       url: `/${router.locale}/career`,
+      current: "career",
     },
     {
       id: 6,
       title: intl.formatMessage({ id: "contact" }),
       url: `/${router.locale}/contact`,
+      current: "contact",
     },
   ];
 

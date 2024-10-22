@@ -132,7 +132,7 @@ const Layout = ({ children }) => {
 
           {/* Particles js */}
         </div>
-        <ParticlesBackground />
+        
       </div>
 
       {/* Nav Bottom */}
