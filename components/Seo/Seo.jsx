@@ -22,7 +22,7 @@ const Seo = ({ children, title, description, keywords, image, url, type }) => {
 };
 
 Seo.defaultProps = {
-  title: "",
+  title: "New title",
   description: "New Description",
   keywords: "New Keywords",
   image: "/images/banner.png",
