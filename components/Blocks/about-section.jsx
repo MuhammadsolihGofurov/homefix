@@ -42,7 +42,7 @@ export default function AboutSection({ page = "home" }) {
           data-aos="fade-up"
           data-aos-delay="200"
           className={`text-text-50 text-base sm:text-lg leading-5 sm:leading-6 ${
-            isHome ? "line-clamp-5" : ""
+            isHome ? "line-clamp-5" : "sm:w-4/5"
           }`}
           dangerouslySetInnerHTML={{
             __html: settings?.about_description,

@@ -111,8 +111,8 @@ export default function Register() {
 
   return (
     <div
-      className={`modal fixed w-full h-screen top-0 left-0 z-[1000] bg-modalBg flex items-center justify-center p-5 overflow-y-scroll scroll__hidden ${
-        registerModal ? "opacity-100 visible z-[100]" : "opacity-0 invisible z-[-1]" 
+      className={`modal fixed w-full h-screen top-0 left-0 z-[1000] bg-modalBg items-center justify-center p-5 overflow-y-scroll scroll__hidden ${
+        registerModal ? "opacity-100 visible z-[100] flex" : "opacity-0 invisible z-[-1] hidden" 
       } transition-opacity duration-150`}
       onClick={() => dispatch(toggleRegisterModal())}
     >

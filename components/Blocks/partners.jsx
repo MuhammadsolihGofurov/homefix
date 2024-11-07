@@ -55,13 +55,13 @@ export default function Partners() {
                 spaceBetween: 24,
               },
             }}
-            className="partnersSwiper"
+            className="partnersSwiper items-center flex"
           >
             {data?.data?.map((item, index) => (
               <SwiperSlide key={index}>
                 <a
                   href={item?.link}
-                  className="opacity-50 hover:opacity-100 transition-opacity duration-150 flex items-center justify-center p-2 text-center"
+                  className="opacity-50 hover:opacity-100 transition-opacity duration-150 flex items-center justify-center p-2 text-center min-h-[130px]"
                 >
                   <img
                     src={item?.icon}

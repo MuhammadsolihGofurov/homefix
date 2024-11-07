@@ -16,13 +16,13 @@ export default function Header() {
         <div className="flex items-center justify-between gap-3 w-full py-5 sm:py-6 px-3 sm:px-8 rounded-br-[36px] rounded-bl-[36px] bg-nav relative z-0 shadow-md shadow-adv-bg-2">
           <Link
             href="/"
-            className="w-[100px] xs:w-[120px] h-[32px] xs:h-[42px]"
+            className="w-[100px] xs:w-[120px]"
           >
             <img
               src={settings?.logo}
               alt="logo"
               title="logo"
-              className="w-[100px] xs:w-[120px] h-[32px] xs:h-[42px]"
+              className="w-[100px] xs:w-[120px]"
             />
           </Link>
           <Menu />
